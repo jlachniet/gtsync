@@ -1,0 +1,15 @@
+{
+	"include": ["src"],
+	"compilerOptions": {
+		"exactOptionalPropertyTypes": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"resolveJsonModule": true,
+		"rootDir": "src",
+		"outDir": "dist",
+		"verbatimModuleSyntax": true,
+		"skipLibCheck": true
+	}
+}

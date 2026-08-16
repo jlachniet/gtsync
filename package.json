@@ -1,0 +1,53 @@
+{
+	"name": "gtsync",
+	"version": "0.1.0",
+	"description": "Experimental audio synchronization tool",
+	"keywords": [
+		"gtsync",
+		"audio",
+		"sound",
+		"sync",
+		"synchronization",
+		"alignment"
+	],
+	"homepage": "https://github.com/jlachniet/gtsync",
+	"bugs": "https://github.com/jlachniet/gtsync/issues",
+	"license": "MIT",
+	"author": "Julian Lachniet",
+	"files": [
+		"dist"
+	],
+	"type": "module",
+	"bin": {
+		"gtsync": "dist/cli.js"
+	},
+	"repository": "github:jlachniet/gtsync",
+	"scripts": {
+		"build": "tsc",
+		"check": "pnpm check:typescript && pnpm check:oxlint && pnpm check:knip && pnpm check:prettier",
+		"check:typescript": "tsc --noEmit",
+		"check:oxlint": "oxlint --deny-warnings --format stylish",
+		"check:knip": "knip --no-progress",
+		"check:prettier": "prettier . --check --log-level warn"
+	},
+	"devDependencies": {
+		"knip": "^6.32.2",
+		"oxlint": "^1.78.0",
+		"prettier": "^3.9.6",
+		"prettier-plugin-organize-imports": "^4.3.0",
+		"typescript": "^7.0.2"
+	},
+	"devEngines": {
+		"runtime": {
+			"name": "node",
+			"version": "^24",
+			"onFail": "error"
+		},
+		"packageManager": {
+			"name": "pnpm",
+			"version": "^11",
+			"onFail": "error"
+		}
+	},
+	"private": true
+}
