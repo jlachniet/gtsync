@@ -1,0 +1,18 @@
+{
+	"include": ["src"],
+	"compilerOptions": {
+		"exactOptionalPropertyTypes": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"module": "nodenext",
+		"resolveJsonModule": true,
+		"rootDir": "src",
+		"types": ["node"],
+		"outDir": "dist",
+		"verbatimModuleSyntax": true,
+		"lib": ["esnext"],
+		"skipLibCheck": true
+	}
+}
