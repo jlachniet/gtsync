@@ -30,6 +30,9 @@
 		"check:knip": "knip --no-progress",
 		"check:prettier": "prettier . --check --log-level warn"
 	},
+	"dependencies": {
+		"commander": "^15.0.0"
+	},
 	"devDependencies": {
 		"@types/node": "^24.13.4",
 		"knip": "^6.35.1",

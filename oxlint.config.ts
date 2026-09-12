@@ -12,5 +12,6 @@ export default defineConfig({
 	rules: {
 		'no-console': ['warn', { allow: ['info', 'warn', 'error'] }],
 		'sort-keys': 'off',
+		'sort-imports': 'off',
 	},
 });
