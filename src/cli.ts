@@ -2,7 +2,7 @@
 
 import { InvalidArgumentError, program } from 'commander';
 import packageJson from '../package.json' with { type: 'json' };
-import { getAudioDataFromPath } from './audio.js';
+import { getAudioDataFromPath, getMonoSamples } from './audio.js';
 
 /**
  * The CLI arguments.
@@ -94,3 +94,6 @@ console.info(
 console.info(
 	`Target audio loaded (${targetAudio.channelData[0]!.length} samples at ${targetAudio.sampleRate} Hz)`,
 );
+
+const sourceAudioMonoSamples = getMonoSamples(sourceAudio);
+const targetAudioMonoSamples = getMonoSamples(targetAudio);

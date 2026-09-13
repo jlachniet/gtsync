@@ -60,6 +60,27 @@ function resample(audioData: AudioData, sampleRate: number): AudioData {
 }
 
 /**
+ * Gets the samples of an AudioData as mono
+ * @param audioData - The AudioData
+ * @returns The mono samples
+ */
+export function getMonoSamples(audioData: AudioData): Float32Array {
+	const samples = new Float32Array(audioData.channelData[0]!.length);
+
+	for (let index = 0; index < samples.length; index++) {
+		let total = 0;
+
+		for (const channel of audioData.channelData) {
+			total += channel[index]!;
+		}
+
+		samples[index] = total / audioData.channelData.length;
+	}
+
+	return samples;
+}
+
+/**
  * Gets the AudioData of a file at the given path, resampled to the given sample
  * rate.
  * @param path - The path
